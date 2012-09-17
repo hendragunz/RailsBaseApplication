@@ -14,3 +14,11 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+
+.rvmrc
+/public/system
+/public/assets
+
+/config/baseapp_setting.yml.example
+/config/database.yml.example
+/db/schema.rb
