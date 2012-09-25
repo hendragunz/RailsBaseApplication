@@ -1,0 +1,8 @@
+%p
+  URL Saved !!
+  %br
+
+%p
+  The short urls are:
+  %a{:href => "http://st.pt/#{@url.token.to_s}", :target => '_blank'}
+    = "http://st.pt/#{@url.token.to_s}"

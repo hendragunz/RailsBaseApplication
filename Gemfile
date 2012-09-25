@@ -6,13 +6,18 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'mysql2'
 
+# API
+gem 'oauth'
+gem "oauth-plugin", "~> 0.4.0"
 
 # engine template
 gem 'jquery-rails'
 gem 'haml'
 gem 'jquery-rails'
 gem 'cells'
-gem "ckeditor", "3.7.1"
+# gem "ckeditor", "3.7.1"
+gem 'rabl'
+gem 'yajl-ruby'
 
 # notification
 gem "gritter"
@@ -30,6 +35,7 @@ gem 'omniauth-google'
 # utility
 gem 'paperclip'
 gem 'kaminari'
+gem 'dynamic_form'
 
 
 #Presentation

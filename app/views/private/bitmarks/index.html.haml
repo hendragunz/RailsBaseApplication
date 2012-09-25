@@ -1,0 +1,48 @@
+.page-header
+  Manage Your Bitmarks
+
+= form_for Url.new, :url => user_bitmarks_path, method: 'post', html: {class: 'form-horizontal'} do |f|
+  %p
+    You can mark your link here....
+  .control-group
+    = f.label :url, 'Input URL', class: 'control-label'
+    .controls
+      = f.text_field :url, class: 'input-xlarge'
+
+  .control-group
+    .controls
+      = f.label :public do
+        = f.check_box :public
+        Make it public !!!
+
+  .form-actions
+    = submit_tag "Submit", class: 'btn btn-primary'
+
+
+.page-header
+  Your current url list
+
+%table.table-bordered.table
+  %thead
+    %tr
+      %th #
+      %th Url
+      %th Short Url
+      %th Total hit
+      %th Public
+      %th Creatd At
+      %th Action
+  %tbody
+    - @bitmarks.each_with_index do |bitmark, idx|
+      %tr
+        %td= idx+1
+        %td= bitmark.url
+        %td= link_to sort_url(bitmark.token), sort_url(bitmark.token), :target => '_blank'
+        %td= bitmark.total_hit
+        %td
+          - if bitmark.public
+            %span.label.label-success Yes
+          - else
+            %span.label.label-warning No
+        %td= bitmark.created_at.strftime("%B %d, %Y at %I:%M %p")
+        %td= link_to 'Delete', '#', method: 'delete', confirm: 'Do you want to delete this mark url?', class: 'btn btn-danger'

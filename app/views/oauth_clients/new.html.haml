@@ -1,0 +1,7 @@
+.page-header
+  %h1 Register a new application
+
+= form_for :client_application, :url => { :action => :create }, :html => {:class => 'form-horizontal'} do |f|
+  = render :partial => "form", :locals => { :f => f }
+  .form-actions
+    = submit_tag "Register", class: 'btn btn-primary'
