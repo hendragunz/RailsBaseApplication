@@ -4,7 +4,7 @@ gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'mysql2'
+gem 'sqlite3'
 
 # API
 gem 'oauth'
@@ -54,7 +54,7 @@ end
 
 
 group :development do
-  gem 'debugger'
+  # gem 'debugger'
   gem 'thin'
   gem 'annotate', ">=2.5.0"
   gem 'ffaker'
